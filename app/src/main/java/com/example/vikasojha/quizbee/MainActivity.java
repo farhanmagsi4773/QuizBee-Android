@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button startbutton=(Button)findViewById(R.id.button);
+        Button startbutton=(Button)findViewById(R.id.button); //button for starting the quiz
         Button aboutbutton=(Button)findViewById(R.id.button2);
         final EditText nametext=(EditText)findViewById(R.id.editName);
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         String name=nametext.getText().toString();
                         Intent intent=new Intent(getApplicationContext(),QuestionsActivity.class);
-                        intent.putExtra("myname",name);
+                        intent.putExtra("myname",name); //sending data to QuestionsActivity
                         startActivity(intent);
                     }
                 });
